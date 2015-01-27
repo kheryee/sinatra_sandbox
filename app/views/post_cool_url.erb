@@ -1,0 +1,37 @@
+<h1>Wisdom Quote of the Day</h1>
+<br>
+<%=@reply%>
+<br><br>
+<form action="/finished" method="post">
+<br><br>----------------------------------------------------------------------<br><br>
+<p>Remember you're gonna cook tonight? Pen your recipe here roughly.</p>
+<p>Dry ingredients:<br><em>(seperate by comma)</em></p>
+<input type="text" name="recipe[dry ingredient]">
+<p>Wet ingredients:<br><em>(seperate by comma)</em></p>
+<input type="text" name="recipe[wet ingredient]">
+<p>Recipe:</p>
+<textarea cols="40" rows="10" name="recipe[description]"></textarea>
+
+<br>
+<p>For drink, which is better?</p>
+<input type="radio" name="drink" value="Milk"> Milk<br>
+<input type="radio" name="drink" value="Water"> Water<br>
+<input type="radio" name="drink" value="Beer"> Beer<br>
+<input type="radio" name="drink" value="Wine" checked> Wine<br>
+<br>
+
+<p>What about friends?</p>
+<input type="checkbox" name="companion?" value="alone">Eating by myself is good.<br>
+<input type="checkbox" name="companion?" value="friends">Eating with friends is good.<br>
+<input type="checkbox" name="companion?" value="him">Eating with him; this moment seems to last forever.<br>
+
+<P>Some snacks maybe?</p>
+<select name="snack">
+<option value="Milk">Mini cake</option>
+<option value="Cheese">Cheese</option>
+<option value="Bread">Sushi</option>
+</select>
+<br><br>
+
+  <input type="submit" value="I'm done!">
+</form>
